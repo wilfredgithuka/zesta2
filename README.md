@@ -1,5 +1,4 @@
-The zesta series is a project that changes the look of laptop chargers from the common cuboid
-black boxes into a more appealing design.
+## Introduction
 
 zesta2 is improvement of the first zesta project. This will be a complete
 make-from-scratch laptop power supply module. The zesta project which I currently use works
@@ -9,59 +8,51 @@ The result is just to make my own power supply/laptop charger from scratch. I wi
 control of the specs and most important, the design. Also I will add some culture to the
 charger to make it more Kenyan. The charger shall still be housed in a zesta jam can.
 
-The device shall have an input of AC 240V and output a clean regulated DC 19.5V
+## Main Objective
 
-The main objective from this project is to understand how Swiched Mode Power Supply devices work.
+Learn and understand how Switched Mode Power Supplies (SMPS) work.
 
-Zesta系列是一个改变笔记本电脑充电器外观的项目黑盒设计更具吸引力。Zesta2是第一个Zesta项目的改进。这将是一个完整的
-从头开电脑电源模块。我目前使用的Zesta项目但由于这些零件不是我自己做的，所以我面临着很多限制。
+## What is a Switched Mode Power Supply?
 
-这样做的结果仅仅是为了让我自己的电源/笔记本电脑充电器从头开始。我会在规范的控制，最重要的是设计。另外，我会在
+Preety much all latops come with an extra device called a charger. Its main function is to
+supply power to charge the laptop's battery.
 
-充电器使它更肯尼亚的文化。充电器仍应装在Zesta果酱罐中。该装置的输入电压应为240V，输出电压应为19.5V的干净调节直流电。
+To do this it converts the mains 240V AC to 19V DC which the laptop requires. This conversion
+is a combination of the following steps:
 
-本项目的主要目标是了解开关电源设备的工作原理。
+* Input - 240V(AC)
+* Rectification and Filtering - High Voltage DC
+* Transformation - AC
+* Rectification and Filtering - 19V DC
 
-## Tools 工具
+## Specs
 
-* Fritzing - PCB Design tool 12MB [yay -S fritzing]
+* Input: AC 240V
+* Output: DC 19.5V
+* Power: 120W
+* Frequency: 60Hz
 
-## Materials 材料
+## Proposed Features
 
-* (Will be added soon)
+* I2C Interface
+* USB 3.0 Interface
+* Opensource
+* Raspberry Pi Controller
+* Microcontroller controlled power supply
+* Dashboard for online/offline monitoring
 
-## Safety First 安全知识
+## Safety First
 
-* This circuit Involves in operating  High voltage AC it is lethal, Handle with extreme care
-* Make the Flyback transformer as your requirement or get a ready made one.
-* If you are construct your own Flyback transformer, then check the operation of the device before fetch into circuit.
-* Again, All stages in SMPS circuit involved in operation of High voltage either AC or DC, Handle with extreme care     and protections.
+* High voltage AC it is lethal.
+* All stages in SMPS circuit have High voltage AC/DC, Handle with extreme care.
+* Do not attemp to remake this project if you are not qualified to do so.
 
-## Circuit Diagram 电路
+## Circuit Diagram
+
 ![circuit-diagram]( http://www.theorycircuit.com/wp-content/uploads/2017/08/smps-circuit-diagram-12v-1a-tny267.png)
 
-## Features 特点
-
-* Efficient power supply system
-* Power consumption can be controlled my a microprocessor
-
-## Specs 规范
-
-Input 240V AC @60hz
-Output 19.5V DC
-Power 120W
-Frequency 60Hz
-
-### Standard Liner Power Supply Design
-
-* Input AC
-* Transformer
-* Rectification
-* Filtering
-* Regulation
-* Output DC
-
 ## References
+
 * [LearnAboutElectronics](http://www.learnabout-electronics.org/PSU/psu30.php)
 * [ElectronicsTutorials](https://www.electronics-tutorials.ws/power/switch-mode-power-supply.html)
 * [HardwareSecrets](https://www.hardwaresecrets.com/anatomy-of-switching-power-supplies/)
